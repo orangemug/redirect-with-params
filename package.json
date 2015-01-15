@@ -1,0 +1,24 @@
+{
+  "name": "redirect-with-params",
+  "description": "Express helper to redirect with params intact.",
+  "version": "0.1.0",
+  "config": {
+    "blanket": {
+      "pattern": [
+        "index.js"
+      ],
+      "data-cover-never": "node_modules"
+    }
+  },
+  "devDependencies": {
+    "blanket": "^1.1.6",
+    "express": "^4.11.0",
+    "mocha": "^2.0.1",
+    "mocha-term-cov-reporter": "^0.2.0",
+    "superagent": "^0.21.0"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/index.js",
+    "coverage": "./node_modules/.bin/mocha test/index.js -r blanket -R mocha-term-cov-reporter"
+  }
+}
