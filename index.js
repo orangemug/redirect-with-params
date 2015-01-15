@@ -5,7 +5,7 @@ module.exports = function(path) {
       if(!req.params[id]) {
         throw "Missing param";
       }
-      return req.params[id];
+      return encodeURIComponent(req.params[id]);
     });
 
     res.redirect(path);
